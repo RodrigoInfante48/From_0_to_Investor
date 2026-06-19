@@ -142,5 +142,49 @@ export const TESTIMONIALS = [
 ]
 
 export const FAQ = [
-  // { id: 1, question: '', answer: '' },
+  {
+    id: 1,
+    question: '¿Necesito dinero para empezar?',
+    answer: 'No necesitas un capital mínimo para acceder a la guía. En el módulo 4 aprenderás a empezar con cualquier cantidad — incluso $10 o $20 al mes son suficientes para poner el sistema en marcha.',
+  },
+  {
+    id: 2,
+    question: '¿Funciona en mi país?',
+    answer: 'Sí. La guía está diseñada para ser aplicable en cualquier país de Latinoamérica. Los principios son universales y las plataformas recomendadas operan en toda la región con documentación en español.',
+  },
+  {
+    id: 3,
+    question: '¿Qué tan rápido veo resultados?',
+    answer: 'Al terminar los 6 módulos (completables en un fin de semana intenso o a tu ritmo en 6 semanas) tendrás tu primer portafolio activo. Los resultados financieros crecen con el tiempo en el mercado — empezar hoy es el primer resultado.',
+  },
+  {
+    id: 4,
+    question: '¿Necesito saber de finanzas o economía?',
+    answer: 'Cero conocimiento previo necesario. Empezamos desde los fundamentos: qué es el dinero, por qué te afecta la inflación, cómo funciona el mercado. Si ya tienes bases, los módulos avanzados te dan el sistema completo que te faltaba.',
+  },
+  {
+    id: 5,
+    question: '¿Cómo accedo después de comprar?',
+    answer: 'Acceso inmediato vía Hotmart. Recibirás tus credenciales al correo y podrás entrar desde cualquier dispositivo, en cualquier momento, sin límite de tiempo. El contenido es tuyo de por vida.',
+  },
+  {
+    id: 6,
+    question: '¿Y si no me sirve?',
+    answer: 'Tienes 30 días de garantía completa sin preguntas. Si aplicas el sistema y no obtienes claridad total sobre cómo invertir, te devolvemos el 100% de tu dinero. El único riesgo real es no intentarlo.',
+  },
 ]
+
+export const PRICING = {
+  valueTotal: 300,
+  price: 97,
+  originalPrice: 197,
+  currency: 'USD',
+  includes: [
+    '6 módulos completos paso a paso',
+    'Plantillas de portafolio listas para usar',
+    'Guía de apertura de cuenta (paso a paso)',
+    'Acceso de por vida + actualizaciones',
+    'Soporte por comunidad Daily Duty Institute',
+    'Garantía de 30 días sin preguntas',
+  ],
+}
