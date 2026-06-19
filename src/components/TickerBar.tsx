@@ -7,7 +7,7 @@ const ITEMS = [
 export default function TickerBar() {
   const doubled = [...ITEMS, ...ITEMS]
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-navy-900 border-b border-gold/20 h-8 overflow-hidden flex items-center">
+    <div aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 bg-navy-900 border-b border-gold/20 h-8 overflow-hidden flex items-center">
       <div className="ticker-track">
         {doubled.map((item, i) => (
           <span key={i} className="font-mono text-xs text-teal px-6 whitespace-nowrap">

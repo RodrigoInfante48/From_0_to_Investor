@@ -45,10 +45,11 @@ export default function App() {
       reveals.forEach(el => observer.observe(el))
     }
 
-    // Magnetic buttons
+    // Magnetic buttons — desktop/mouse-only
     type MagHandler = { el: HTMLElement; move: (e: MouseEvent) => void; leave: () => void }
     const handlers: MagHandler[] = []
-    if (!prefersReduced) {
+    const hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    if (!prefersReduced && hasHover) {
       document.querySelectorAll<HTMLElement>('.magnetic-btn').forEach(btn => {
         const move = (e: MouseEvent) => {
           const rect = btn.getBoundingClientRect()

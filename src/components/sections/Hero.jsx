@@ -173,7 +173,7 @@ export default function Hero() {
         {/* Stats strip */}
         <div
           ref={statsRef}
-          className="mt-20 flex justify-center gap-8 md:gap-16"
+          className="mt-16 md:mt-20 flex flex-wrap justify-center gap-6 md:gap-16"
         >
           {STATS.map(({ value, label }) => (
             <div key={label} className="text-center">

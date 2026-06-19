@@ -115,10 +115,11 @@ export default function EquityCurve() {
 
   return (
     <>
-      {/* Counter */}
+      {/* Counter — hidden on mobile alongside the rail */}
       <div
         ref={counterRef}
         aria-hidden="true"
+        className="equity-curve-rail"
         style={{
           position:   'fixed',
           top:        '50%',
@@ -138,9 +139,10 @@ export default function EquityCurve() {
         $0
       </div>
 
-      {/* SVG rail — left side strip */}
+      {/* SVG rail — left side strip, hidden on mobile to avoid overlap */}
       <div
         aria-hidden="true"
+        className="equity-curve-rail"
         style={{
           position:      'fixed',
           top:           0,

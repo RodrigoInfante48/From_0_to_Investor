@@ -4,6 +4,8 @@ export default function CursorGlow() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Skip listener on touch-only devices; CSS also hides the element
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
     const el = ref.current
     if (!el) return
     const move = (e: MouseEvent) => {
@@ -14,5 +16,5 @@ export default function CursorGlow() {
     return () => window.removeEventListener('mousemove', move)
   }, [])
 
-  return <div id="cursor-glow" ref={ref} />
+  return <div id="cursor-glow" ref={ref} aria-hidden="true" />
 }
