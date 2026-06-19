@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
+import { useLenis } from './hooks/useLenis'
 
 import CursorGlow from './components/CursorGlow'
 import EquityCurve from './components/EquityCurve'
@@ -19,19 +19,10 @@ import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 
 export default function App() {
+  useLenis()
+
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    // Lenis smooth scroll
-    let lenis: Lenis | null = null
-    if (!prefersReduced) {
-      lenis = new Lenis({ lerp: 0.09 })
-      const raf = (time: number) => {
-        lenis?.raf(time)
-        requestAnimationFrame(raf)
-      }
-      requestAnimationFrame(raf)
-    }
 
     // Scroll reveal via IntersectionObserver
     const reveals = document.querySelectorAll<HTMLElement>('.reveal')
@@ -73,7 +64,6 @@ export default function App() {
     }
 
     return () => {
-      lenis?.destroy()
       handlers.forEach(({ el, move, leave }) => {
         el.removeEventListener('mousemove', move)
         el.removeEventListener('mouseleave', leave)
