@@ -4,7 +4,7 @@ import { useLenis } from './hooks/useLenis'
 import CursorGlow from './components/CursorGlow'
 import EquityCurve from './components/EquityCurve'
 import TickerBar from './components/TickerBar'
-import Navbar from './components/Navbar'
+import Navbar from './components/layout/Navbar'
 import Hero from './components/Hero'
 import Problem from './components/Problem'
 import Solution from './components/Solution'
@@ -16,7 +16,7 @@ import Pricing from './components/Pricing'
 import Guarantee from './components/Guarantee'
 import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
-import Footer from './components/Footer'
+import Footer from './components/layout/Footer'
 
 export default function App() {
   useLenis()
