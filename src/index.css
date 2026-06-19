@@ -13,12 +13,20 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   background-color: var(--navy-950);
   color: white;
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
+  min-width: 360px;
+}
+
+/* Focus visible — global baseline */
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Ticker */
@@ -73,7 +81,7 @@ body {
 .teal-glow-box { box-shadow: 0 0 40px rgba(0,230,199,0.25), 0 0 80px rgba(0,230,199,0.1); }
 .gold-glow-box { box-shadow: 0 0 40px rgba(255,184,0,0.35), 0 0 80px rgba(255,184,0,0.15); }
 
-/* Cursor */
+/* Cursor — hidden on touch-only devices */
 #cursor-glow {
   pointer-events: none;
   position: fixed;
@@ -86,8 +94,11 @@ body {
   will-change: left, top;
   transition: left 0.08s linear, top 0.08s linear;
 }
+@media (hover: none) {
+  #cursor-glow { display: none; }
+}
 
-/* Equity counter */
+/* Equity counter — legacy id kept for compat */
 #equity-counter {
   font-family: 'Space Mono', monospace;
   font-size: 0.75rem;
@@ -100,8 +111,21 @@ body {
   pointer-events: none;
 }
 
+/* Equity curve rail — hide on small screens to avoid overlap */
+.equity-curve-rail {
+  display: none;
+}
+@media (min-width: 768px) {
+  .equity-curve-rail {
+    display: block;
+  }
+}
+
+/* Ticker — pause when reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .ticker-track { animation: none; }
   .mesh-bg { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  /* FAQ accordion */
+  [role="region"] { transition: none !important; }
 }

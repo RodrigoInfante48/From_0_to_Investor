@@ -20,11 +20,6 @@ function AccordionItem({
   useEffect(() => {
     const el = panelRef.current
     if (!el) return
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) {
-      setHeight(isOpen ? el.scrollHeight : 0)
-      return
-    }
     setHeight(isOpen ? el.scrollHeight : 0)
   }, [isOpen])
 
@@ -70,6 +65,7 @@ function AccordionItem({
           height: `${height}px`,
           overflow: 'hidden',
           transition: 'height 0.28s cubic-bezier(0.4,0,0.2,1)',
+          // prefers-reduced-motion handled via CSS
         }}
       >
         <div className="px-6 pb-5 font-sans text-navy-900/65 text-sm leading-relaxed">
