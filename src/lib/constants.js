@@ -45,11 +45,100 @@ export const MODULES = [
 ]
 
 export const BENEFITS = [
-  // { id: 1, title: '', description: '' },
+  {
+    id: 1,
+    icon: '📈',
+    metric: { to: 12, prefix: '', suffix: '%', decimals: 0, label: 'retorno promedio anual histórico del S&P 500' },
+    title: 'Tu dinero crece mientras duermes',
+    description: 'Construyes un portafolio diversificado que genera rendimientos de forma pasiva, sin estar pegado a una pantalla.',
+  },
+  {
+    id: 2,
+    icon: '🧭',
+    metric: null,
+    title: 'Claridad total desde el día uno',
+    description: 'Sabes exactamente qué hacer, en qué orden y con qué plataformas. Sin bucles de YouTube ni cursos incompletos.',
+  },
+  {
+    id: 3,
+    icon: '💼',
+    metric: { to: 6, prefix: '', suffix: ' semanas', decimals: 0, label: 'para tener tu primer portafolio real operativo' },
+    title: 'Portafolio real en 6 semanas',
+    description: 'No teoría infinita. Al terminar el módulo 5 ya tienes activos reales trabajando por ti, aunque empieces desde $0.',
+  },
+  {
+    id: 4,
+    icon: '🔒',
+    metric: null,
+    title: 'Decisiones sin pánico',
+    description: 'Entiendes el riesgo real vs. el percibido. Cuando el mercado cae, sabes qué hacer — y no es vender en pánico.',
+  },
+  {
+    id: 5,
+    icon: '⚙️',
+    metric: { to: 80, prefix: '', suffix: '%', decimals: 0, label: 'del proceso en piloto automático' },
+    title: 'Automatización y libertad',
+    description: 'Configuras aportaciones automáticas y rebalanceo periódico. El método trabaja incluso si no lo vigilas.',
+  },
+  {
+    id: 6,
+    icon: '🌎',
+    metric: null,
+    title: 'Acceso a mercados globales',
+    description: 'Inviertes en las mejores empresas del mundo desde cualquier país de Latinoamérica, con brokers accesibles y regulados.',
+  },
 ]
 
+export const AUTHOR = {
+  name: 'Rodrigo Infante',
+  role: 'BI Analyst & Fundador, Daily Duty Institute',
+  avatarPlaceholder: null, // Reemplaza con la URL de tu foto
+  bio: [
+    'Soy analista de datos de día — construyo dashboards y modelos que ayudan a empresas a tomar mejores decisiones con sus números.',
+    'Hace unos años me di cuenta de que aplicaba esa misma disciplina de datos a mis finanzas personales, pero sin un mapa claro para llegar al mercado de capitales. Encontré el camino a golpes. Creé este método para que tú no tengas que hacerlo.',
+    'Daily Duty Institute nació de una premisa simple: la consistencia diaria, respaldada por datos reales, construye riqueza más rápido que cualquier "secreto" de inversión.',
+  ],
+  credentials: [
+    'BI Analyst con +5 años en análisis de datos',
+    'Creador de herramientas de inversión basadas en datos',
+    'Fundador de Daily Duty Institute',
+    'Inversor activo en ETFs y mercados globales',
+  ],
+}
+
 export const TESTIMONIALS = [
-  // { id: 1, name: '', role: '', quote: '', avatar: '' },
+  {
+    id: 1,
+    name: 'Ana G.',
+    role: 'Diseñadora freelance — PLACEHOLDER',
+    quote: '«Llevaba años posponiendo invertir porque "no era el momento". En 3 semanas de curso ya tenía mi cuenta abierta y mi primer ETF. Ojalá lo hubiera hecho antes.»',
+    result: 'Primera inversión en 21 días',
+    avatar: null,
+  },
+  {
+    id: 2,
+    name: 'Carlos M.',
+    role: 'Empleado corporativo — PLACEHOLDER',
+    quote: '«El módulo de flujo de caja me cambió la perspectiva completamente. Liberé $200 al mes que "no tenía" y ahora van directo a mi portafolio.»',
+    result: '+$200/mes invertidos',
+    avatar: null,
+  },
+  {
+    id: 3,
+    name: 'Laura P.',
+    role: 'Emprendedora — PLACEHOLDER',
+    quote: '«Había intentado entender los ETFs con videos de YouTube durante meses. El método de Rodrigo lo explica en un orden que por fin tiene sentido. Super claro.»',
+    result: 'Portafolio diversificado en 6 semanas',
+    avatar: null,
+  },
+  {
+    id: 4,
+    name: 'Diego R.',
+    role: 'Ingeniero de software — PLACEHOLDER',
+    quote: '«Sabía de tecnología pero de inversiones, cero. El módulo de vehículos de inversión fue exactamente lo que necesitaba: sin jerga, sin rodeos.»',
+    result: 'De $0 a inversor en 2 meses',
+    avatar: null,
+  },
 ]
 
 export const FAQ = [
