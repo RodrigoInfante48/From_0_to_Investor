@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# From $0 → Investor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page de venta para el producto **From $0 → Investor** de [Daily Duty Institute](https://pay.hotmart.com/S103203527C?bid=1764518330085), distribuido en Hotmart.
 
-Currently, two official plugins are available:
+Guía práctica de inversión: desde cero hasta construir un portafolio real.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **Vite + React + TypeScript**
+- **Tailwind CSS** — diseño utilitario
+- **GSAP + ScrollTrigger** — animaciones, incluida la "Equity Curve" SVG
+- **Lenis** — smooth scroll
+- **lucide-react** — iconos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Comandos
 
-## Expanding the ESLint configuration
+```bash
+# Instalar dependencias
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Servidor de desarrollo (http://localhost:5173)
+npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Build de producción → /dist
+npm run build
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview del build localmente
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deploy
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+El deploy es automático a **GitHub Pages** en cada push a `main` via GitHub Actions (`.github/workflows/deploy.yml`).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+URL de producción: **https://rodrigoinfante48.github.io/From_0_to_Investor/**
+
+## Checkout
+
+Todos los CTAs apuntan a:
+`https://pay.hotmart.com/S103203527C?bid=1764518330085`
